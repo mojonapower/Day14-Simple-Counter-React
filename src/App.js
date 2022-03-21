@@ -9,10 +9,9 @@ const Contador = props => {
 
 
 
-function App(props) {
+function App() {
   return (
-    <p>{props.tiempo}</p>
-   /* <Contador " /> */
+   <Contador tiempo="0" />
  )
 }
 

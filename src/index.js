@@ -4,15 +4,13 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-setInterval((x) => {
-  ReactDOM.render(
+
+ReactDOM.render(
     <React.StrictMode>
-      <App tiempo={x}/>
+      <App />
     </React.StrictMode>,
     document.getElementById('root')
-  )
-  x++
-}, 1000);
+  );
 
 
 
