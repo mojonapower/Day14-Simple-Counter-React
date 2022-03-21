@@ -1,5 +1,4 @@
 /* import logo from './logo.svg'; */
-/* import './components.jsx'; */
 import './App.css';
 
 const Contador = props => {
@@ -9,9 +8,11 @@ const Contador = props => {
 }
 
 
-function App() {
- return (
-   <Contador tiempo="0" />
+
+function App(props) {
+  return (
+    <p>{props.tiempo}</p>
+   /* <Contador " /> */
  )
 }
 
