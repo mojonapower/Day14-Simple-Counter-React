@@ -11,12 +11,12 @@ const SimpleCounter = (props) => {
   return (
     <div className='container'>
       <div className='clockImg flex-item'><i class="fa-regular fa-clock"></i></div>
-      <div className='digito6 flex-item'>0</div>
-      <div className='digito5 flex-item'>0</div>
-      <div className='digito4 flex-item'>0</div>
-      <div className='digito3 flex-item'>0</div>
-      <div className='digito2 flex-item'>0</div>
-      <div className='digito1 flex-item'>0</div>
+      <div className='digito6 flex-item'>{props.d6}</div>
+      <div className='digito5 flex-item'>{props.d5}</div>
+      <div className='digito4 flex-item'>{props.d4}</div>
+      <div className='digito3 flex-item'>{props.d3}</div>
+      <div className='digito2 flex-item'>{props.d2}</div>
+      <div className='digito1 flex-item'>{props.d1}</div>
     </div>
     )
 }
