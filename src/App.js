@@ -1,5 +1,5 @@
 /* import logo from './logo.svg'; */
-import './App.css';
+/* import './App.css';
 
 const Contador = props => {
   return(
@@ -15,4 +15,4 @@ function App() {
  )
 }
 
-export default App;
+export default App; */

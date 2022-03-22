@@ -11,3 +11,31 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+.container {
+  display: flex;
+  background-color: black;
+  color: white;
+  width: 20%;
+  font-size: xx-large;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.digito1 {
+  margin-right: 5%;
+}
+
+.clockImg {
+  margin-left: 5%;
+  width: 15% !important;
+}
+
+.flex-item {
+  background-color: rgba(43, 41, 41, 0.842);
+  width: 10%;
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}

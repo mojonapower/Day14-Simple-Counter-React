@@ -3,11 +3,29 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import './App.css';
+
+
+
+const SimpleCounter = (props) => {
+  return (
+    <div className='container'>
+      <div className='clockImg flex-item'><i class="fa-regular fa-clock"></i></div>
+      <div className='digito6 flex-item'>0</div>
+      <div className='digito5 flex-item'>0</div>
+      <div className='digito4 flex-item'>0</div>
+      <div className='digito3 flex-item'>0</div>
+      <div className='digito2 flex-item'>0</div>
+      <div className='digito1 flex-item'>0</div>
+    </div>
+    )
+}
+
 
 
 ReactDOM.render(
     <React.StrictMode>
-      <App />
+      <SimpleCounter />
     </React.StrictMode>,
     document.getElementById('root')
   );
