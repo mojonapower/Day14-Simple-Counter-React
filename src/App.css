@@ -38,7 +38,7 @@
 }
 
 
-.container {
+.clock-container {
   display: flex;
   background-color: black;
   color: white;

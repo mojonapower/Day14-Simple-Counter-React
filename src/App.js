@@ -1,9 +1,8 @@
 /* import logo from './logo.svg'; */
 import './App.css';
-import React, { useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 
-const SimpleCounter = (props) => {
-
+const SimpleCounter = props => {
   const [count, setCount] = useState(0);
   React.useEffect(() => {
     const timer = window.setInterval(() => { setCount(prevCount => prevCount + 1); }, 1000);
@@ -69,15 +68,24 @@ const SimpleCounter = (props) => {
   };
 
 
+
   return (
-    <div className='container'>
-      <div className='clockImg flex-item'><i class="fa-regular fa-clock"></i></div>
-      <div className='digito6 flex-item'>{digitos.d6}</div>
-      <div className='digito5 flex-item'>{digitos.d5}</div>
-      <div className='digito4 flex-item'>{digitos.d4}</div>
-      <div className='digito3 flex-item'>{digitos.d3}</div>
-      <div className='digito2 flex-item'>{digitos.d2}</div>
-      <div className='digito1 flex-item'>{digitos.d1}</div>
+    <div>
+      <div className='clock-container'>
+        <div className='clockImg flex-item'><i className="fa-regular fa-clock"></i></div>
+        <div className='digito6 flex-item'>{digitos.d6}</div>
+        <div className='digito5 flex-item'>{digitos.d5}</div>
+        <div className='digito4 flex-item'>{digitos.d4}</div>
+        <div className='digito3 flex-item'>{digitos.d3}</div>
+        <div className='digito2 flex-item'>{digitos.d2}</div>
+        <div className='digito1 flex-item'>{digitos.d1}</div>
+      </div>
+
+      <div>
+        <input type='number' placeholder='Number to start countdown' id='countdownInput'/>
+        <button id='startCountdownButton'>Start Countdown</button>
+      </div>
+
     </div>
   );
 };
