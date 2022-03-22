@@ -17,8 +17,8 @@ code {
   display: flex;
   background-color: black;
   color: white;
-  width: 20%;
-  font-size: xx-large;
+  width: 50%;
+  font-size: 400%;
   justify-content: space-between;
   align-items: center;
 }
@@ -29,7 +29,7 @@ code {
 
 .clockImg {
   margin-left: 5%;
-  width: 15% !important;
+  width: 14% !important;
 }
 
 .flex-item {
@@ -38,4 +38,5 @@ code {
   text-align: center;
   margin-top: 5%;
   margin-bottom: 5%;
+  
 }
