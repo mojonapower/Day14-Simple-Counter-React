@@ -1,6 +1,6 @@
 /* import logo from './logo.svg'; */
 import './App.css';
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 const SimpleCounter = props => {
   const [count, setCount] = useState(0);
