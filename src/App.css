@@ -38,3 +38,30 @@
 }
 
 
+.container {
+  display: flex;
+  background-color: black;
+  color: white;
+  width: 50%;
+  font-size: 400%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.digito1 {
+  margin-right: 5%;
+}
+
+.clockImg {
+  margin-left: 5%;
+  width: 14% !important;
+}
+
+.flex-item {
+  background-color: rgba(43, 41, 41, 0.842);
+  width: 10%;
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  
+}

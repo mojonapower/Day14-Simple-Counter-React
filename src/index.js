@@ -7,25 +7,13 @@ import './App.css';
 
 
 
-const SimpleCounter = (props) => {
-  return (
-    <div className='container'>
-      <div className='clockImg flex-item'><i class="fa-regular fa-clock"></i></div>
-      <div className='digito6 flex-item'>{props.d6}0</div>
-      <div className='digito5 flex-item'>{props.d5}0</div>
-      <div className='digito4 flex-item'>{props.d4}0</div>
-      <div className='digito3 flex-item'>{props.d3}0</div>
-      <div className='digito2 flex-item'>{props.d2}0</div>
-      <div className='digito1 flex-item'>{props.d1}0</div>
-    </div>
-    )
-}
+
 
 
 
 ReactDOM.render(
     <React.StrictMode>
-      <SimpleCounter />
+      <App />
     </React.StrictMode>,
     document.getElementById('root')
   );
