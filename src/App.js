@@ -79,8 +79,8 @@ const SimpleCounter = (props) => {
       <div className='digito2 flex-item'>{digitos.d2}</div>
       <div className='digito1 flex-item'>{digitos.d1}</div>
     </div>
-  )
-}
+  );
+};
 
 
 
