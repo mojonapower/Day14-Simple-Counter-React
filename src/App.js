@@ -98,7 +98,7 @@ function App() {
     mode: "1",
   });
 
-
+  
   
  function startCountdown () {
    setStartParameters({
@@ -115,7 +115,7 @@ function App() {
     <div>
       <SimpleCounter countStart={startParameters.countStart} mode={startParameters.mode}/>
       <input type='number' placeholder='Number to start countdown' id='countdownInput' />
-      <button id='startCountdownButton' onClick={(startCountdown)}>Start Countdown</button>
+      <button id='startCountdownButton' onClick={startCountdown}>Start Countdown</button>
     </div>
   )
 };
