@@ -5,11 +5,12 @@ import React, { useState } from 'react';
 const SimpleCounter = props => {
   const [count, setCount] = useState(Number(props.countStart));
   React.useEffect(() => {
-    const timer = window.setInterval(() => { setCount(prevCount => prevCount + Number(props.mode)); }, 1000);
+    
+    const timer = window.setInterval(() => {console.log(props.countStart); setCount(prevCount => prevCount + Number(props.mode)); }, 1000);
     return () => {
       window.clearInterval(timer);
     };
-  })
+  },[count])
 
 
   let stringTimer = count >= 0 ? count.toString() : "0";
@@ -89,25 +90,18 @@ const SimpleCounter = props => {
 
 
 
-
 function App() {
-
-  
   const [startParameters, setStartParameters] = useState({
     countStart: "0",
     mode: "1",
   });
 
-  
-  
  function startCountdown () {
    setStartParameters({
     countStart: "100",
     mode: "-1",
   });
  };
-
-
 
 
   return (
