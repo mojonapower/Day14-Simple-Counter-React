@@ -3,16 +3,16 @@ import './App.css';
 import React, { useState } from 'react';
 
 const SimpleCounter = props => {
-  const [count, setCount] = useState(Number(props.start));
+  const [count, setCount] = useState(Number(props.countStart));
   React.useEffect(() => {
     const timer = window.setInterval(() => { setCount(prevCount => prevCount + Number(props.mode)); }, 1000);
     return () => {
       window.clearInterval(timer);
     };
-  }, [])
+  })
 
 
-  let stringTimer = count.toString();
+  let stringTimer = count >= 0 ? count.toString() : "0";
   let digitos = {
     d1: 0,
     d2: 0,
@@ -92,20 +92,20 @@ const SimpleCounter = props => {
 
 function App() {
 
-  const [startParameters, setStartParameters] = useState({
-    start: "0",
-    mode: "1"
-  })
-
-
   
+  const [startParameters, setStartParameters] = useState({
+    countStart: "0",
+    mode: "1",
+  });
+
+
   
  function startCountdown () {
    setStartParameters({
-    start: "100",
-    mode: "-1"
-  })
- }
+    countStart: "100",
+    mode: "-1",
+  });
+ };
 
 
 
@@ -113,11 +113,11 @@ function App() {
   return (
 
     <div>
-      <SimpleCounter start={startParameters.start} mode={startParameters.mode} />
+      <SimpleCounter countStart={startParameters.countStart} mode={startParameters.mode}/>
       <input type='number' placeholder='Number to start countdown' id='countdownInput' />
-      <button id='startCountdownButton' onClick={startCountdown}>Start Countdown</button>
+      <button id='startCountdownButton' onClick={(startCountdown)}>Start Countdown</button>
     </div>
   )
-}
+};
 
 export default App;
