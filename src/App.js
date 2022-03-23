@@ -3,9 +3,9 @@ import './App.css';
 import React, { useState } from 'react';
 
 const SimpleCounter = props => {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(Number(props.start));
   React.useEffect(() => {
-    const timer = window.setInterval(() => { setCount(prevCount => prevCount + 1); }, 1000);
+    const timer = window.setInterval(() => { setCount(prevCount => prevCount + Number(props.mode)); }, 1000);
     return () => {
       window.clearInterval(timer);
     };
@@ -81,10 +81,7 @@ const SimpleCounter = props => {
         <div className='digito1 flex-item'>{digitos.d1}</div>
       </div>
 
-      <div>
-        <input type='number' placeholder='Number to start countdown' id='countdownInput'/>
-        <button id='startCountdownButton'>Start Countdown</button>
-      </div>
+
 
     </div>
   );
@@ -94,8 +91,32 @@ const SimpleCounter = props => {
 
 
 function App() {
+
+  const [startParameters, setStartParameters] = useState({
+    start: "0",
+    mode: "1"
+  })
+
+
+  
+  
+ function startCountdown () {
+   setStartParameters({
+    start: "100",
+    mode: "-1"
+  })
+ }
+
+
+
+
   return (
-    <SimpleCounter />
+
+    <div>
+      <SimpleCounter start={startParameters.start} mode={startParameters.mode} />
+      <input type='number' placeholder='Number to start countdown' id='countdownInput' />
+      <button id='startCountdownButton' onClick={startCountdown}>Start Countdown</button>
+    </div>
   )
 }
 
